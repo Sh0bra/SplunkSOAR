@@ -30,31 +30,31 @@ Once you have everything working and are able to forward your events to Splunk S
 
 Playbooks are a set of instructions and actions that Splunk SOAR can do on a given input. For our use case we forwarded unidentified IP addresses that were flagged by our detection and sent it to a custom playbook called UID Checker.
 
-![Screenshot of SOAR playbooks](/assets/soar-playbook)
+![Screenshot of SOAR playbooks](/assets/soar-playbook.png)
 
 Screenshot of SOAR playbooks
 
 As a Security Analyst one of the things I would do when given an unidentified IP is run it through VirusTotal(VT). Every time a new IP is flagged I would browse to VT, copy the IP and paste it into the search and run it to see the results. 
 
-![Screenshot of VirusTotal scan results](/assets/virustotal)
+![Screenshot of VirusTotal scan results](/assets/virustotal.png)
 
 Screenshot of VirusTotal scan results
 
 This gets pretty repetitive. Imagine doing this for 100s of IPs addresses throughout the month. This is where Splunk SOAR helps us to automate this process and returning the results via an event in Splunk. Splunk playbooks are created via a GUI interface and we can filter incoming data based on certain fields and run actions on them. Splunk SOAR has a built in VirusTotal action that scans ip addresses. Below is an example of the workflow of the playbook we created. 
 
-![Screenshot of Splunk SOAR playbook](/assets/soar-playbook-gui)
+![Screenshot of Splunk SOAR playbook](/assets/soar-playbook-gui.png)
 
 Screenshot of Splunk SOAR playbook
 
 We recently also integrated a WHOIS command to add more data on incoming IP addresses. You can see the corresponding output in the screenshot below.
 
-![Screenshot of playbook automation ](/assets/soar-automation)
+![Screenshot of playbook automation ](/assets/soar-automation.png)
 
 Screenshot of playbook automation 
 
 This information is further exported to Splunk via the Splunk app for SOAR and you can see the data below.
 
-![Splunk SOAR data seen from Splunk](/assets/soar-data)
+![Splunk SOAR data seen from Splunk](/assets/soar-data.png)
 
 Splunk SOAR data seen from Splunk
 
